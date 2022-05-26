@@ -10,12 +10,17 @@
 
 
 // numbers
-// numbers without the smallest integer,
+// numbers without the smallest integer
+// examples
+// pseudo code
 
 
-
+// call a function smallest numbers
 function removeSmallest(numbers) {
+    // define the smallest number and it's index using indexOf() and 
+    // Math.min(...numbers) with the ... spread syntax
     let indexOfMin = numbers.indexOf(Math.min(...numbers));
     return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
-    console.log([...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)])
 }
+
+console.log(removeSmallest([10,2,3,4,8,5,6,7]))
