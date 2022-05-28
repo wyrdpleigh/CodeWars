@@ -17,8 +17,8 @@
 
 // call a function smallest numbers
 function removeSmallest(numbers) {
-    // define the smallest number and it's index using indexOf() and 
-    // Math.min(...numbers) with the ... spread syntax
+    // define the smallest number and it's index using indexOf()
+    // and Math.min(...numbers) with the ... spread syntax
     let indexOfMin = numbers.indexOf(Math.min(...numbers));
     return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
 }
