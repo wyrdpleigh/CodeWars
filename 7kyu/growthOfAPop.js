@@ -16,28 +16,16 @@
 // ps: nb_years, finalCatch, percentage conversion, current value within loop
 
 
+// create function nbYear w/ parameters
+// loop for however many years it takes
+// for each loop, population is equal to p0 + p0 + percent / 100 + aug
+// use Math.floor to return a whole integer
+// 
+
 function nbYear(p0, percent, aug, p) {
-    // initialize array
     
-      var finalCatch = [];
-    
-    // Convert percentage
-    
-      var percent = percent / 100 
-      
-    // Loop through
-      
-      for( var p0; p0 < p; p0 +=p0 * percent + aug) {
-        
-        // Create a current value placeholder
-        
-        currValue = p0 + p0 * percent + aug;
-        
-        // Push the current value to the finalCatch until loop ends
-        
-        finalCatch.push(currValue);
-      }
-    
-      // Return final catch once the loop ends
-        return finalCatch.length;
+  for (var years = 0; p0 < p; years++) {
+    p0 = Math.floor(p0 + p0 * percent / 100 + aug);
   }
+ return years
+} 
